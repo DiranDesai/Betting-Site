@@ -139,6 +139,7 @@ header .header-right{
     border-radius: 10px;
     border: 1px solid #7f818f;
     font-weight: 600;
+    color: #161717;
 }
 
 .searching-list span i{
