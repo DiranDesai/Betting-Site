@@ -2,6 +2,7 @@
 
 :root{
     --color-grey: #efecf3;
+    --shallow-shadow: 0 1px .625rem 0 hsla(210, 7%, 22%, .06), 0 .125rem .25rem 0 hsla(210, 7%, 22%, .08);
 }
 
 *{
@@ -18,6 +19,7 @@
 body{
     background-color: var(--color-grey);
     font-family: "Roboto";
+    overflow-x: hidden;
 }
 
 .container{
@@ -43,7 +45,31 @@ header{
     background: linear-gradient(to right, #45233b, #212542);
     padding-top: 0.5rem;
     padding-bottom: 3rem;
+    position: relative;
 }
+
+header::before{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: #efecf3;
+    left: 0;
+    bottom: -20px;
+    transform: rotate(233deg);
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: #efecf3;
+    right: 0;
+    bottom: -20px;
+    transform: rotate(123deg);
+}
+
 
 header .inner-header{
     display: flex;
@@ -65,7 +91,7 @@ header .header-body h4{
 }
 
 header i{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 header .header-right{
@@ -80,6 +106,8 @@ header .header-right{
     background-color: white;
     border-radius: 70px;
     position: relative;
+    box-shadow: var(--shallow-shadow);
+    margin-top: 2rem;
 }
 .search-container input{
     background: transparent;
@@ -90,4 +118,62 @@ header .header-right{
 .search-container i{
     position: absolute;
     right: 25px;
+}
+
+.searching-list-container{
+    margin-top: 2rem;
+    color: #7f818f;
+}
+
+.searching-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.searching-list span{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #7f818f;
+    font-weight: 600;
+}
+
+.searching-list span i{
+    margin-right: 0.3rem;
+}
+
+.recently-searched-container{
+    margin-top: 2rem;
+}
+
+.recently-searched-container h2{
+    font-weight: 700;
+    font-style: italic;
+    color: #282f47;
+    margin: 1.2rem 0;
+}
+.recently-searched-container h3{
+    color: #282f47;
+    margin: 1rem 0;
+}
+.recently-searched-container .recently-list{
+    display: flex;
+    gap: 1rem;
+}
+
+.recently-searched-container .recently-list div{
+    text-align: center;
+}
+
+.recently-searched-container .recently-list div img{
+    border-radius: 10px;
+    width: 8rem;
+    height: 8rem;
+}
+
+.recently-searched-container .recently-list div h4{
+    text-align: center;
+    margin-top: 1rem;
+    color: #282f47;
 }
