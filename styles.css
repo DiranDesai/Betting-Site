@@ -17,7 +17,7 @@
 
 
 body{
-    background-color: var(--color-grey);
+    /* background-color: var(--color-grey); */
     font-family: "Roboto";
     overflow-x: hidden;
 }
