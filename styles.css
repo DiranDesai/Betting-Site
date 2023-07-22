@@ -89,6 +89,7 @@ header .header-body h2{
 header .header-body h4{
     color: #ffffff;
     margin-top: 1rem;
+    font-weight: 400;
 }
 
 header i{
@@ -180,5 +181,5 @@ header .header-right{
 .recently-searched-container .recently-list div h4{
     text-align: center;
     margin-top: 1rem;
-    color: #282f47;
+    color: #7f818f;
 }
